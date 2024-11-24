@@ -18,8 +18,6 @@
         <div class="header-content">
             <a href="/" class="logo">Build Things</a>
             <nav class="talent-nav">
-                <a href="#current-openings">Current Openings</a>
-                <a href="#zone-of-genius">Zone of Genius</a>
                 <a href="#process">Our Process</a>
                 <a href="#contact">Contact Us</a>
             </nav>
@@ -34,8 +32,6 @@
 
     <!-- Mobile Navigation Menu -->
     <div class="mobile-menu">
-        <a href="#current-openings">Current Openings</a>
-        <a href="#zone-of-genius">Zone of Genius</a>
         <a href="#process">Our Process</a>
         <a href="#contact">Contact Us</a>
     </div>
@@ -60,13 +56,13 @@
                 </div>
                 <!-- Call to Action Buttons -->
                 <div class="cta-buttons">
-                    <a href="#current-openings" class="cta-button">
-                        <i class="fas fa-briefcase"></i>
-                        Explore Current Openings
-                    </a>
-                    <a href="#zone-of-genius" class="cta-button outline">
+                    <a href="#contact" class="cta-button">
                         <i class="fas fa-lightbulb"></i>
-                        Zone of Genius Submission
+                        Get Started
+                    </a>
+                    <a href="#contact" class="cta-button outline" data-job="genius">
+                        <i class="fas fa-star"></i>
+                        Zone of Genius
                     </a>
                 </div>
             </div>
@@ -97,7 +93,7 @@
                     </div>
                 </div>
                 <blockquote class="founder-quote">
-                    <p>"We believe great talent comes from experience, grit, and creativity—not just degrees and titles."</p>
+                    <p>"If we provide the outcomes and frameworks, then our people will build the processes that get the outcomes"</p>
                     <cite>- Ryan, Founder</cite>
                 </blockquote>
             </div>
@@ -108,9 +104,36 @@
             <div class="container">
                 <h2>What is Outcome-Based Hiring?</h2>
                 <div class="outcome-intro">
-                    <p>Outcome-Based Hiring redefines traditional recruitment by focusing on the results and value a candidate can bring to the company. Instead of emphasizing resumes and rigid job descriptions, we collaboratively define success, set measurable outcomes, and empower talent to chart their path to achieving these goals.</p>
+                    <div class="outcome-highlight">
+                        <p class="highlight-text">We hire problem solvers who deliver results.</p>
+                    </div>
+                    <div class="outcome-cards">
+                        <div class="outcome-card">
+                            <div class="card-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Solutions Over Resumes</h3>
+                            <p>We value your ability to solve real problems and deliver tangible results over traditional credentials.</p>
+                        </div>
+                        <div class="outcome-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Impact-Driven Growth</h3>
+                            <p>Your success is measured by the outcomes you achieve and the value you create, not by time spent or tasks completed.</p>
+                        </div>
+                        <div class="outcome-card">
+                            <div class="card-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Collaborative Success</h3>
+                            <p>Together, we define clear goals and empower you with the resources to achieve them your way.</p>
+                        </div>
+                    </div>
+                    <div class="outcome-statement">
+                        <p>Outcome-Based Hiring is about finding people who make things happen. We're not interested in where you came from or what titles you've held – we care about what you can achieve and how you can move things forward.</p>
+                    </div>
                 </div>
-
                 <h3 class="process-title">The Process</h3>
                 <div class="process-steps">
                     <div class="process-step">
@@ -175,80 +198,6 @@
                     </div>
                     <div class="outcome-conclusion">
                         <p>By shifting the focus from duties to outcomes, Outcome-Based Hiring creates a win-win scenario for both talent and organizations, empowering people to make a measurable impact while fostering growth and innovation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Two Ways to Join -->
-        <section id="choose-path" class="choose-path">
-            <div class="container">
-                <h2>Two Ways to Join Our Team</h2>
-                <div class="paths-grid">
-                    <!-- Current Openings -->
-                    <div class="path-card" data-path="openings">
-                        <div class="path-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3>Current Openings</h3>
-                        <p>Explore roles with clearly defined outcomes where your impact is immediately felt.</p>
-                        <ul>
-                            <li>Clear success metrics</li>
-                            <li>Immediate impact</li>
-                            <li>Structured growth path</li>
-                        </ul>
-                        <a href="#current-openings" class="path-button">View Openings</a>
-                    </div>
-                    <!-- Zone of Genius -->
-                    <div class="path-card featured" data-path="genius">
-                        <div class="path-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Zone of Genius</h3>
-                        <p>Don't see a role that fits? Pitch your dream job and show us how you can contribute.</p>
-                        <ul>
-                            <li>Design your ideal position</li>
-                            <li>Showcase unique skills</li>
-                            <li>Shape your success path</li>
-                        </ul>
-                        <a href="#zone-of-genius" class="path-button" data-job="genius">Submit Your Proposal</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Current Openings -->
-        <section id="current-openings" class="current-openings">
-            <div class="container">
-                <h2>Current Openings</h2>
-                <div class="openings-grid">
-                    <!-- Job Card -->
-                    <div class="job-card" data-job="executionbuilder">
-                        <div class="job-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Execution Builder</h3>
-                        <p>Help small businesses grow by building and automating their systems.</p>
-                        <ul>
-                            <li>Design automated solutions</li>
-                            <li>Build growth systems</li>
-                            <li>Drive measurable results</li>
-                        </ul>
-                        <button class="job-button">Learn More</button>
-                    </div>
-                    <!-- Coming Soon -->
-                    <div class="job-card coming-soon">
-                        <div class="job-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Coming Soon</h3>
-                        <p>More exciting opportunities on the horizon.</p>
-                        <ul>
-                            <li>New positions opening regularly</li>
-                            <li>Diverse opportunities</li>
-                            <li>Impact-driven roles</li>
-                        </ul>
-                        <button class="job-button disabled">Stay Tuned</button>
                     </div>
                 </div>
             </div>
@@ -376,7 +325,7 @@
                 <p>Whether you're ready to apply or want to craft your own role, we're excited to hear from you.</p>
                 <div class="cta-buttons">
                     <a href="mailto:careers@buildthings.dev" class="cta-button">Apply Now</a>
-                    <a href="#zone-of-genius" class="cta-button outline" data-job="genius">Zone of Genius Submission</a>
+                    <a href="#contact" class="cta-button outline" data-job="genius">Zone of Genius</a>
                 </div>
             </div>
         </section>

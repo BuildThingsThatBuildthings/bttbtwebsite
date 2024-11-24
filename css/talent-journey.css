@@ -298,79 +298,204 @@ section {
 /* Outcome-Based Hiring Section */
 .outcome-hiring {
     padding: 6rem 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.02), transparent);
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
 }
 
-.outcome-intro {
-    max-width: 800px;
-    margin: 0 auto 4rem;
+.outcome-highlight {
     text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(255, 215, 0, 0.1));
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.outcome-intro p {
+.highlight-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #3498db, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.outcome-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.outcome-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    background: rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.outcome-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.outcome-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.outcome-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.outcome-statement {
+    text-align: center;
+    max-width: 800px;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outcome-statement p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
 }
 
+@media (max-width: 768px) {
+    .highlight-text {
+        font-size: 2rem;
+    }
+    
+    .outcome-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .outcome-statement {
+        padding: 1.5rem;
+    }
+    
+    .outcome-statement p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-text {
+        font-size: 1.8rem;
+    }
+    
+    .outcome-card {
+        padding: 1.5rem;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Process Section Styles */
 .process-title {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin: 4rem 0 3rem;
+    background: linear-gradient(45deg, #3498db, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .process-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem;
 }
 
 .process-step {
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 2.5rem;
+    transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .process-step:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-red);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .step-number {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 202, 40, 0.1);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(255, 215, 0, 0.2));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--accent-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFD700;
     margin-bottom: 1.5rem;
-    border: 2px solid var(--accent-red);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-.step-number:hover {
-    background-color: var(--accent-red);
-    color: white;
+.process-step:hover .step-number {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.3), rgba(255, 215, 0, 0.3));
+    transform: scale(1.1);
 }
 
 .step-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
 }
 
 .step-intro {
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .step-details-list {
@@ -381,81 +506,105 @@ section {
 
 .step-details-list li {
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
 
 .step-details-list li::before {
-    content: '•';
+    content: '→';
     position: absolute;
     left: 0;
-    color: var(--accent-red);
+    color: #FFD700;
 }
 
 .step-note {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     font-style: italic;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #FFD700;
 }
 
+/* Why it Works Section */
 .why-it-works {
     margin-top: 6rem;
     text-align: center;
 }
 
 .why-it-works h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 3rem;
-    color: var(--accent-color);
+    background: linear-gradient(45deg, #3498db, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 3rem 0;
 }
 
 .benefit-card {
-    background: var(--card-bg);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
     padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-red);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-card i {
-    font-size: 2rem;
-    color: var(--accent-red);
+    font-size: 2.5rem;
+    color: #FFD700;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover i {
+    transform: scale(1.1);
 }
 
 .benefit-card h4 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .benefit-card p {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
 
 .outcome-conclusion {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outcome-conclusion p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -466,14 +615,40 @@ section {
 }
 
 @media (max-width: 768px) {
+    .process-title,
+    .why-it-works h3 {
+        font-size: 2rem;
+    }
+
     .process-steps,
     .benefits-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .outcome-intro p {
+    .process-step,
+    .benefit-card {
+        padding: 1.8rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .outcome-conclusion {
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .outcome-conclusion p {
         font-size: 1.1rem;
-        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-title,
+    .why-it-works h3 {
+        font-size: 1.8rem;
     }
 
     .process-step,
@@ -481,148 +656,23 @@ section {
         padding: 1.5rem;
     }
 
-    .why-it-works h3 {
-        font-size: 1.8rem;
-        padding: 0 1rem;
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
 
-    .outcome-conclusion {
-        padding: 0 1rem;
-        font-size: 1.1rem;
+    .step-content h3 {
+        font-size: 1.3rem;
     }
-}
 
-/* Paths Section */
-.paths-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
+    .benefit-card i {
+        font-size: 2rem;
+    }
 
-.path-card {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    transition: var(--transition);
-}
-
-.path-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.path-icon {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.path-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.path-card p {
-    flex-grow: 1;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.path-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-}
-
-.path-card li {
-    padding: 0.5rem 0;
-}
-
-.path-button {
-    margin-top: auto;
-    padding: 0.75rem;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border-radius: 30px;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.path-button:hover {
-    background-color: #ffd54f;
-}
-
-/* Current Openings */
-.openings-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.job-card {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-    transition: var(--transition);
-}
-
-.job-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.job-icon {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.job-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.job-card p {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.job-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-}
-
-.job-card li {
-    padding: 0.5rem 0;
-}
-
-.job-button {
-    padding: 0.75rem;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.job-button:hover {
-    background-color: #ffd54f;
-}
-
-.job-button.disabled {
-    background-color: #9e9e9e;
-    cursor: not-allowed;
+    .benefit-card h4 {
+        font-size: 1.3rem;
+    }
 }
 
 /* Hiring Process */
@@ -946,4 +996,14 @@ section {
     .innovation-grid {
         flex-direction: column;
     }
+}
+
+/* Remove unused sections */
+.choose-path,
+.current-openings,
+.paths-grid,
+.path-card,
+.job-card,
+.openings-grid {
+    display: none;
 }
