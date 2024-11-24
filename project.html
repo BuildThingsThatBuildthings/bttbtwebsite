@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Build Things</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom styles for the project page */
+        .hero-title {
+            font-size: 4rem;
+            background: linear-gradient(45deg, var(--color-gold), var(--color-white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--color-white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(45deg, var(--color-gold), var(--color-dark));
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--color-white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card p {
+            color: var(--color-white);
+            opacity: 0.9;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: var(--color-white);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: var(--color-light);
+        }
+
+        .contact-form button[type="submit"] {
+            padding: 1rem 2rem;
+            background: var(--color-gold);
+            color: var(--color-black);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background: var(--color-dark);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--color-dark);
+            color: var(--color-white);
+            padding: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-section {
+            margin-right: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--color-white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--color-gold);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://storage.googleapis.com/msgsndr/UAmz1IQNKJaI1bYl6xUV/media/6735d970e921021f433ed2cd.png" alt="Build Things Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="resources.html">RESOURCES</a>
+                <a href="project.html">PROJECTS</a>
+                <a href="jobs.html">GOOD JOBS FOR COOL PEOPLE</a>
+                <a href="#contact" class="cta-nav">Book Now</a>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="resources.html" class="nav-link">RESOURCES</a>
+        <a href="project.html" class="nav-link">PROJECTS</a>
+        <a href="jobs.html" class="nav-link">GOOD JOBS FOR COOL PEOPLE</a>
+        <a href="#contact" class="nav-link cta-nav">Book Now</a>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Building <span class="glow">Tomorrow's</span> Solutions <span class="glow">Today</span></h1>
+            <p class="hero-subtitle">
+                Innovative projects that drive real business growth and community impact.
+            </p>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-column">
+                    <h2 class="section-title">Current Projects</h2>
+                    <div class="card-grid">
+                        <div class="card">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Agents</h3>
+                            <p>Building intelligent automation solutions for business growth</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-users"></i>
+                            <h3>Patient Acquisition</h3>
+                            <p>Strategic healthcare growth solutions</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-golf-ball"></i>
+                            <h3>Golf Course Management</h3>
+                            <p>Modern solutions for course operations</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Business Analytics</h3>
+                            <p>Data-driven decision making tools</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-column">
+                    <h2 class="section-title">Project Focus Areas</h2>
+                    <div class="card-grid">
+                        <div class="card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Innovation</h3>
+                            <p>Cutting-edge solutions for modern challenges</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Growth</h3>
+                            <p>Scalable systems for business expansion</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Efficiency</h3>
+                            <p>Streamlined processes and automation</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Partnership</h3>
+                            <p>Collaborative development approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@buildthings.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Build Things. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

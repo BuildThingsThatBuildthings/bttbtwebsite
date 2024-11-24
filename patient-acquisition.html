@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Acquisition - Build Things</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://storage.googleapis.com/msgsndr/UAmz1IQNKJaI1bYl6xUV/media/6735d970e921021f433ed2cd.png" alt="Build Things Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="resources.html">RESOURCES</a>
+                <a href="project.html">PROJECTS</a>
+                <a href="jobs.html">GOOD JOBS FOR COOL PEOPLE</a>
+                <a href="#contact" class="cta-nav">Book Now</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Patient Trust Funnel</h1>
+            <p class="hero-subtitle">
+                From Awareness to Patient Success
+            </p>
+            <div class="cta-container">
+                <a href="#process" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="process" class="process">
+        <div class="container">
+            <h2>Our Patient Acquisition Process</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Awareness</h3>
+                    <p>We reach potential patients through targeted marketing campaigns and community outreach.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Engagement</h3>
+                    <p>Building trust through informative content and personalized communication.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Conversion</h3>
+                    <p>Converting interest into appointments with seamless scheduling and follow-ups.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Patient Success</h3>
+                    <p>Ensuring patient satisfaction and success through continuous support and care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="features">
+        <div class="container">
+            <h2>Ready to Build Something Great?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Build Faster</h3>
+                    <p>Accelerate your development process with our proven frameworks and tools.</p>
+                    <a href="#" class="feature-cta">Schedule a Call</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Scale Better</h3>
+                    <p>Create systems that grow with your business without breaking.</p>
+                    <a href="#" class="feature-cta">Get Started</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovate Smarter</h3>
+                    <p>Turn your ideas into reality with our innovative approach.</p>
+                    <a href="#" class="feature-cta">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

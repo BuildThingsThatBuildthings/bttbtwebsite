@@ -1,0 +1,18 @@
+/* CSS Variables */
+:root {
+    --color-primary: #FF3333;    /* Vibrant Red */
+    --color-secondary: #000000;  /* Pure Black */
+    --color-white: #FFFFFF;
+    --color-light: #1A1A1A;      /* Slightly lighter black for contrast */
+    --color-dark: #000000;
+    --color-gray: #333333;
+    --color-text: #FFFFFF;
+    --color-glow: #00f7ff;       /* Glowing Light Blue */
+    --max-width: 1200px;
+    --navbar-height: 80px;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --box-shadow: 0 4px 6px rgba(0, 247, 255, 0.1);
+    --box-shadow-hover: 0 8px 15px rgba(0, 247, 255, 0.2);
+    --section-padding: 5rem;
+}
